@@ -60,11 +60,11 @@ function setsong(e) {
 
 
 
-//  source.src = 'music/' + songs[1];
-//  player.load();
+  source.src = 'music/' + songs[1];
+  player.load();
 
-//  player.load();
-//  player.play();
+  player.load();
+  player.play();
 //  player.pause();
 
 
@@ -81,15 +81,20 @@ volumeSlider.oninput = e => {
 
 document.getElementById('control_button').addEventListener('click', () => {
    // console.log('clicked')
-
     if(play) {
         player.pause();
     }
     else {
-        player.play();
+        if (player.currentTime !== 0) {
+            player.play();
+        }
+        else {
+            alert('select a song first');
+        }
     }
 
     play = !play;
+
 });
 
 
