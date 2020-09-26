@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    background-color: lightpink;
+    background-image: linear-gradient(to right top, #051937, #1b2b59, #393d7d, #5c4ea0, #845ec2);
+    display: flex;
+}
+
+.wrapper {
+    width: 70%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    border-radius: 25px;
+    color: #845EC2;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin: 1em 0;
+    margin-bottom: .5em;
+    font-size: 2em;
+}
+
+.content {
+    height: calc(100% - 240px);
+    display: grid;
+    padding: 0 3em 3em 3em;
+}
+
+
+#control {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5em 4em;
+    margin-top: 2em;
+    background-color: #051937;
+    border-radius: 0 0 25px 25px;
+}
+
+#progressBar {
+    width: 100%;
+}
+
+input:in-range {
+    float: ;
+}
+
+.button {
+    display: flex;
+}
+
+.button > label {
+    margin: auto;
+    padding-top: 1em;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.volume {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 4em 2.5em 4em;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#social {
+    margin: 0 .5em;
+    width: 30px;
+}
+
+#play {
+    cursor: pointer;
+}
+
+#volume {
+    margin: 0 5px;
+}
+
+#volumeBarWrapper {
+    font-size: 1.5em;
+}
+
+#version {
+    color: white;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+#musicList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    overflow: scroll;
+    gap: 1em;
+    scroll-behavior: smooth;
+
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#musicList::-webkit-scrollbar {
+  display: none;
+}
+
+.music_card {
+    width: 200px;
+    height: 150px;
+    background-color: #051937;
+    place-self: center;
+    border: 1px solid #845EC2;
+    margin: 1.5em;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+
+.glow {
+    border: none;
+
+    -webkit-box-shadow: 1px 1px 23px 3px rgba(132,94,194,1);
+    -moz-box-shadow: 1px 1px 23px 3px rgba(132,94,194,1);
+    box-shadow: 1px 1px 23px 3px rgba(132,94,194,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    #control {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .volume {
+        margin: 1em 2em;
+    }
+
+    .social {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #social:first-child {
+        margin-right: auto;
+    }
+
+    #volumeBarWrapper {
+        display: none;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    #musicList {
+        
+    }
+
+    #play {
+        width: 50px;
+    }
+}
