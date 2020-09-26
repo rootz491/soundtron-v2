@@ -41,7 +41,7 @@ body {
 
 
 #control {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -55,9 +55,6 @@ body {
     width: 100%;
 }
 
-input:in-range {
-    float: ;
-}
 
 .button {
     display: flex;
@@ -164,6 +161,7 @@ input:in-range {
         border-radius: 0;
     }
     #control {
+        position: fixed;
         border-radius: 0;
     }
 }
