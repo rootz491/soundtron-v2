@@ -5,8 +5,8 @@ let songs = [
     'Ringer.mp3'
 ]
 
-const musicCards = document.querySelectorAll('.music_card');
-let play = false;
+
+let play = true;
 let player = document.getElementById('player');
 let source = document.getElementById('source');
 var i=0;
@@ -31,19 +31,21 @@ function createCards(amount) {
 
 createCards(songs.length);
 
+const musicCards = document.querySelectorAll('.music_card');
+//console.log(musicCards);
 
 //  card event listener 
-
-for (const card of musicCards) {
+musicCards.forEach( card => {
     card.value = songs[i++];
+    //console.log(i)
     //console.log(card.classList);
     card.addEventListener('click', setsong);
-}
+});
 
 //  set song
 
 function setsong(e) {
-    console.log(e.target.value);
+    //console.log(e.target.value);
     //  remove glow class from all cards
     for (const card of musicCards) 
         card.classList.remove('glow');
@@ -60,11 +62,11 @@ function setsong(e) {
 
 
 
-  source.src = 'music/' + songs[1];
-  player.load();
-
-  player.load();
-  player.play();
+//  source.src = 'music/' + songs[1];
+//  player.load();
+//
+//  player.load();
+//  player.play();
 //  player.pause();
 
 
@@ -80,21 +82,19 @@ volumeSlider.oninput = e => {
 //  play pause button   event listener
 
 document.getElementById('control_button').addEventListener('click', () => {
-   // console.log('clicked')
-    if(play) {
-        player.pause();
-    }
-    else {
-        if (player.currentTime !== 0) {
-            player.play();
+    //console.log('clicked')
+    if (player.currentTime !== 0) { 
+        if(play) {
+            player.pause();
         }
         else {
-            alert('select a song first');
+                player.play();
         }
+        play = !play;
     }
-
-    play = !play;
-
+    else {
+        alert('select a song first');
+    }
 });
 
 
