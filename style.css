@@ -100,7 +100,14 @@ body {
     font-size: 15px;
 }
 
+progress {
+    -webkit-appearance: none;
+}
 
+progress::-webkit-progress-bar-value {
+    -webkit-appearance: none;
+    background: orangered;
+  }
 
 
 
