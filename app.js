@@ -1,5 +1,5 @@
 const data = {
-    eminem: {
+    Eminem: {
         songs: [
             'Freak.mp3',
             'Lucky You.mp3',
@@ -8,30 +8,36 @@ const data = {
         ],
         image: 'artist/em.jpg'
     },
-    edSheeran: {
+    EdSheeran: {
         songs: [
             'Ringer.mp3'
         ],
         image: 'artist/ed.png'
     },
-    logic: {
+    Logic: {
         songs: [
             'Greatest.mp3'
         ],
         image: 'artist/logic.jpg'
     },
-    lilDicky: {
+    LilDicky: {
         songs: [
             'Lucky You.mp3'
         ],
         image: 'artist/dicky.jpg'
     },
-    juiceWrld: {
+    JuiceWrld: {
         songs: [
             'Lucky You.mp3'
         ],
         image: 'artist/JW.jpg'
+    },
+    /*
+    unknown: {
+        songs: [],
+        images: ''
     }
+    */
 }
 
 const artist = Object.keys(data);
