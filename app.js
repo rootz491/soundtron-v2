@@ -125,6 +125,17 @@ function listenCloseMusic() {
         //  remove glow class from all cards
         for (const card of musicCards) 
             card.classList.remove('glow');
+        deleteList();
+    }
+}
+
+//  delete list while closing 'music list'
+
+function deleteList() {
+    let musicTags = document.querySelectorAll('.song');
+    for(let item of musicTags) {
+        //console.log(item);
+        item.remove();
     }
 }
 
@@ -143,6 +154,7 @@ function setsong(e) {
     //*/    
     //  remove down class
     container.classList.remove('down');
+    deleteList();
 }
 
 

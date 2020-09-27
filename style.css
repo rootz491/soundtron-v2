@@ -193,16 +193,16 @@ progress::-webkit-progress-bar-value {
     z-index: 10;
 
     transform: translateX(100%);
-    transition: all .5s ease;
+    transition: all .75s ease-out;
 
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 1.5em;
     align-items: center;
     text-align: center;
     overflow-x: scroll;
-
+    padding: 2em;
 }
 
 .down {
@@ -214,9 +214,8 @@ progress::-webkit-progress-bar-value {
 }
 
 #closeButton {
-    position: absolute;
-    top: 2em;
     cursor: pointer;
+    z-index: 15;
 }
 
 
